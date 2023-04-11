@@ -1,0 +1,97 @@
+@@include('@@webRoot/template/_head.html',{
+	'pageTitle': '',
+	'pageKeywords': '',
+	'pageDescription': ''
+})
+	<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="@@webRoot/css/pageslist.css" />
+</head>
+<body class="app">
+	<main class="app__content">
+		<section class="section pageslist">
+			<div class="container" style="max-width:1000px;">
+				<div class="ui-grid pageslist__grid"></div>
+			</div>
+		</section>
+	</main>
+@@include('@@webRoot/template/_foot.html')
+<script>
+	const pages = [
+		[
+			{
+				ttl: 'Главная ++',
+				file: 'index.html'
+			}
+		],
+		[
+			{
+				ttl: 'Каталог ++',
+				file: 'page-catalog.html'
+			},
+			{
+				ttl: 'Карточка товара ++',
+				file: 'page-catalog-product.html'
+			},
+		],
+		[
+			{
+				ttl: 'О нас ++',
+				file: 'page-about.html'
+			},
+			{
+				ttl: 'Контакты ++',
+				file: 'page-contacts.html'
+			},
+			{
+				ttl: 'FAQ ++',
+				file: 'page-faq.html'
+			},
+			{
+				ttl: 'Текстовая ++',
+				file: 'page-text.html'
+			},
+		],
+		[
+			{
+				ttl: 'Акции ++',
+				file: 'page-actions.html'
+			},
+			{
+				ttl: 'Статьи ++',
+				file: 'page-articles.html'
+			},
+			{
+				ttl: 'Статья ++',
+				file: 'page-article.html'
+			},
+		],
+	];
+	(function() {
+		$.each(pages, function(i) {
+			let sec = $(this);
+
+			$.each(sec, function(l) {
+				let page = sec[l];
+
+				$('.pageslist__grid').append(`
+					<div class="ui-grid__col pageslist__col">
+						<a class="pageslist__item" href="${page.file}" target="_blank">
+							<div class="pageslist__item-ttl">
+								${page.ttl}
+							</div>
+							<div class="pageslist__item-file">
+								${page.file}
+							</div>
+						</a>
+					</div>
+				`);
+			});
+
+			if (i < pages.length - 1) {
+				$('.pageslist__grid').append(`<div class="ui-grid__col pageslist__div"></div>`);
+			}
+		});
+	})(jQuery);
+</script>
+</body>
+</html>

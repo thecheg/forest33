@@ -1,0 +1,160 @@
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+	opacity: .5;
+	text-align: inherit !important;
+	color: inherit !important;
+	transition:opacity .2s;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+	opacity: .5;
+	text-align: inherit !important;
+	color: inherit !important;
+	transition:opacity .2s;
+}
+
+textarea::-webkit-input-placeholder {
+	opacity: .5;
+	text-align: inherit !important;
+	color: inherit !important;
+	transition:opacity .2s;
+}
+
+textarea::-moz-placeholder {
+	opacity: .5;
+	text-align: inherit !important;
+	color: inherit !important;
+	transition:opacity .2s;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder,
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+	opacity: 1;
+}
+
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder {
+	opacity: 1;
+}
+
+input:focus::-moz-placeholder,
+textarea:focus::-moz-placeholder {
+	opacity: 1;
+}
+
+label {
+	display: block;
+	position: relative;
+}
+
+input,
+textarea,
+button {
+	border-radius:0;
+}
+
+textarea {
+	resize: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance:none;
+}
+
+input[type='number'] {
+	-moz-appearance:textfield;
+}
+
+:-webkit-autofill,
+:-webkit-autofill:hover, 
+:-webkit-autofill:focus {
+	-webkit-box-shadow:0 0 0 1000px #fff inset!important;
+}
+
+.ui {
+	&-input {
+		padding:0;
+		position:relative;
+		cursor:text;
+
+		--input-bg:#D9D9D9;
+
+		&__i {
+			display:block;
+			position:relative;
+
+			&:before {
+				content:'';
+				position:absolute;
+				z-index:1;
+				pointer-events: none;
+				left:16px;
+				top:14px;
+				width:24px;
+				aspect-ratio: 1/1;
+				background:$color-green;
+				mask-image:var(--input-icon);
+				mask-size:100%;
+			}
+
+			&--n {
+				--input-icon:url('data:image/svg+xml,%3Csvg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M12.507 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm0 10c4.42 0 8 1.79 8 4v2h-16v-2c0-2.21 3.58-4 8-4Z" fill="%23208C6F"/%3E%3C/svg%3E');
+			}
+
+			&--p {
+				--input-icon:url('data:image/svg+xml,%3Csvg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M7.13 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.28-.28.67-.36 1.02-.25 1.12.37 2.32.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1 17 17 0 0 1-17-17 1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2Z" fill="%23208C6F"/%3E%3C/svg%3E');
+			}
+
+			&--e {
+				--input-icon:url('data:image/svg+xml,%3Csvg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M4 20c-.55 0-1.02-.196-1.413-.588A1.922 1.922 0 0 1 2 18V6c0-.55.196-1.021.588-1.413A1.922 1.922 0 0 1 4 4h16c.55 0 1.021.196 1.413.588.392.392.588.863.587 1.412v12c0 .55-.196 1.021-.588 1.413A1.922 1.922 0 0 1 20 20H4Zm8-7 8-5V6l-8 5-8-5v2l8 5Z" fill="%23208C6F"/%3E%3C/svg%3E');
+			}
+
+			&--m {
+				--input-icon:url('data:image/svg+xml,%3Csvg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M22.172.093c.436.117.755.305 1.101.651.352.352.535.665.652 1.124.066.249.075 1.48.075 11.217v10.936l-2.4-2.398-2.405-2.402-8.601-.01c-8.208-.014-8.611-.019-8.855-.098-.839-.286-1.476-.96-1.669-1.77C.01 17.08 0 16.072 0 9.595c0-8.154-.014-7.68.272-8.266C.436.997.98.454 1.312.29 1.903 0 1.183.018 12.024.023c8.55 0 9.924.01 10.149.07ZM4.805 6.013v1.194h14.39l.014-1.147c.005-.628 0-1.17-.014-1.204-.014-.051-1.425-.06-7.204-.051l-7.186.014v1.194ZM4.79 9.605l-.01 1.185H19.22V9.63c0-.642-.014-1.18-.033-1.195-.014-.018-3.258-.028-7.205-.023l-7.176.014-.014 1.18Zm4.818 3.597v1.194h9.61v-2.388h-9.61v1.194Z" fill="%23208C6F"/%3E%3C/svg%3E');
+			}
+		}
+
+		& input,
+		& textarea {
+			width:100%;
+			display:block;
+			color:#000;
+			font-size:14px;
+			line-height:20px;
+			font-weight:400;
+			text-align:left;
+			box-shadow:none;
+			border:transparent solid 2px;
+			border-radius:5px;
+			background:var(--input-bg);
+			position:relative;
+			transition:all .2s;
+			padding:14px 18px 14px 55px;
+		}
+
+		&__t {
+			display:block;
+			font-size: 20px;
+			line-height: 1.3552em;
+			margin-bottom:13px;
+			font-weight:600;
+			color:$color-green;
+		}
+
+		&.error {
+			& input,
+			& textarea {
+				border-color:#f00!important;
+			}
+		}
+
+		&--2 {
+			--input-bg:#eee;
+		}
+	}
+
+}

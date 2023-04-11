@@ -1,0 +1,187 @@
+.ui {
+	&-btn {
+		&,
+		&__inner {
+			display:flex;
+			justify-content:center;
+			align-items:center;
+		}
+
+		--btn-family:'Inter', 'Montserrat';
+		--btn-font:18px;
+		--btn-line:1.222em;
+		--btn-weight:700;
+		--btn-pad:9px 31px;
+		--btn-height:62px;
+		--btn-radius:40px;
+		--btn-gap:14px;
+
+		display:flex;
+		align-items:center;
+		gap:var(--btn-gap);
+		font-family:var(--btn-family);
+		font-size:var(--btn-font);
+		line-height:var(--btn-line);
+		font-weight:var(--btn-weight);
+		border:var(--btn-border) solid 1px;
+		color:var(--btn-color);
+		background:var(--btn-bg);
+		min-height:var(--btn-height);
+		border-radius:var(--btn-radius);
+		padding:var(--btn-pad);
+
+		&__text {
+			display:block;
+			position:relative;
+		}
+
+		&__icon,
+		&__arr {
+			display:block;
+			flex-shrink: 0;
+			position:relative;
+
+			& svg {
+				fill:var(--btn-icon);
+				stroke:var(--btn-icon);
+				transition:all .2s;
+			}
+		}
+
+		&__icon {
+			width:28px;
+			aspect-ratio: 1/1;
+		}
+
+		&__arr {
+			width:33px;
+			height:16px;
+			clip-path: polygon(
+				0 0,
+				calc(100% + 20px) 0,
+				calc(100% + 20px) 100%,
+				0% 100%
+			);
+
+			& svg {
+				width:41px;
+				height:16px;
+				position:absolute;
+				top:0;
+				right:0;
+
+			}
+		}
+
+		&--fw {
+			width:100%;
+		}
+
+		html.no-touch &-c:hover &,
+		html.no-touch &:is(a):hover,
+		html.no-touch &:is(button):hover,
+		.ui-tabs__item.active &:is(a),
+		.ui-tabs__item.active &:is(button) {
+			border-color:var(--btn-border-h);
+			color:var(--btn-color-h);
+			background:var(--btn-bg-h);
+
+			& svg {
+				fill:var(--btn-icon-h);
+				stroke:var(--btn-icon-h);
+			}
+		}
+
+		html.no-touch &-c:hover &,
+		html.no-touch &:is(a):hover &,
+		html.no-touch &:is(button):hover &,
+		.ui-tabs__item.active &:is(a) &,
+		.ui-tabs__item.active &:is(button) & {
+			&__arr {
+				& svg {
+					transform:translateX(8px);
+				}
+			}
+		}
+
+		&--fw-4 {
+			--btn-weight:400;
+		}
+
+		&--simple {
+			min-height:auto;
+			padding:0;
+			border:none;
+			border-radius:0;
+			--btn-family:'Montserrat';
+		}
+
+		&--border-green {
+			--btn-border:#{$color-green};
+			--btn-color:#fff;
+			--btn-icon:#fff;
+			--btn-bg:transparent;
+			
+			--btn-border-h:#{$color-green};
+			--btn-color-h:#fff;
+			--btn-icon-h:#fff;
+			--btn-bg-h:#{$color-green};
+		}
+
+		&--border-green2 {
+			--btn-border:#{$color-green};
+			--btn-color:#000;
+			--btn-icon:#{$color-green};
+			--btn-bg:transparent;
+			
+			--btn-border-h:#{$color-green};
+			--btn-color-h:#fff;
+			--btn-icon-h:#fff;
+			--btn-bg-h:#{$color-green};
+		}
+
+		&--white-green {
+			--btn-color:#fff;
+			--btn-icon:#{$color-green};
+			
+			--btn-color-h:#{$color-green};
+			--btn-icon-h:#{$color-green};
+		}
+
+		&--grey-green {
+			--btn-color:#756E6E;
+			--btn-icon:#{$color-green};
+			
+			--btn-color-h:#fff;
+			--btn-icon-h:#fff;
+		}
+
+		&--green {
+			--btn-border:#{$color-green};
+			--btn-color:#fff;
+			--btn-icon:#fff;
+			--btn-bg:#{$color-green};
+			
+			--btn-border-h:#{$color-green-d};
+			--btn-color-h:#fff;
+			--btn-icon-h:#fff;
+			--btn-bg-h:#{$color-green-d};
+		}
+
+		&--border-white {
+			--btn-border:#fff;
+			--btn-color:#fff;
+			--btn-icon:#fff;
+			--btn-bg:transparent;
+			
+			--btn-border-h:#{$color-green-d};
+			--btn-color-h:#fff;
+			--btn-icon-h:#fff;
+			--btn-bg-h:#{$color-green-d};
+		}
+	}
+}
+
+button {
+	@include noselect;
+}

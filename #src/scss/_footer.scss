@@ -1,0 +1,162 @@
+.footer {
+	padding:var(--page-gap) 0 40px;
+	background:$color-blue;
+	color:#fff;
+
+
+	@media only screen and (min-width: 1001px) {
+		&__block {
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-template-rows: 1fr auto;
+			gap: 0px 0px;
+			grid-template-areas:
+				'left center right'
+				'left bot right';
+		}
+	
+		&__col {
+			&--c {
+				grid-area: center;
+			}
+	
+			&--b {
+				grid-area: bot;
+			}
+	
+			&--l {
+				grid-area: left;
+			}
+	
+			&--r {
+				grid-area: right;
+				display:flex;
+				justify-content:flex-end;
+			}
+		}
+
+		&__menu {
+			&--r {
+				max-width:200px;
+				width:100%;
+			}
+
+			&--h {
+				display:flex;
+				gap:20px;
+				justify-content: center;
+			}
+
+			&--h & {
+				&-head {
+					padding-bottom:0;
+					border:none;
+				}
+
+				&-item {
+					margin-bottom:0!important;
+				}
+			}
+		}
+
+	}
+
+	&__menu {
+		&-item {
+			display:flex;
+			flex-direction: column;
+			align-items: flex-start;
+
+			&:not(:last-child) {
+				margin-bottom:20px;
+			}
+		}
+
+		&-head {
+			font-size: 18px;
+			line-height: 22px;
+			padding-bottom:20px;
+			border-bottom:$color-green solid 1px;
+		}
+
+		&-sub {
+			padding-top:20px;
+		}
+
+		&-subitem {
+			&:not(:last-child) {
+				margin-bottom:12px;
+			}
+		}
+
+		&-sublink {
+			font-size:16px;
+			line-height:1.63em;
+		}
+
+		& a {
+			html.no-touch &:hover {
+				color:$color-green;
+			}
+		}
+	}
+
+	&__contacts {
+		font-size: 18px;
+		line-height: 22px;
+
+		&-item {
+			&:not(:last-child) {
+				margin-bottom:20px;
+			}
+		}
+	}
+
+	&__logo {
+		display:block;
+		width:120px;
+		margin:0 auto;
+
+		& svg {
+			fill:#fff;
+			transition:fill .2s;
+		}
+
+		html.no-touch &:hover {
+			& svg {
+				fill:$color-green;
+			}
+		}
+
+		html.no-touch &:hover {
+			opacity:.7;
+		}
+	}
+
+	&__slogan {
+		text-align:center;
+		font-size: 14px;
+		line-height:1.3552em;
+		color:$color-green;
+		margin:20px auto 0;
+	}
+
+	&__links {
+		margin-top:var(--page-gap);
+		display:flex;
+		flex-wrap:wrap;
+		gap:20px;
+
+		&-item {
+			& a {
+				color:#565252;
+				font-size:12px;
+				line-height:1.3552em;
+
+				html.no-touch &:hover {
+					color:$color-green;
+				}
+			}
+		}
+	}
+}

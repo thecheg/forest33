@@ -1,0 +1,195 @@
+@@include('@@webRoot/template/_head.html',{
+	'pageTitle': 'Контакты',
+	'pageKeywords': '',
+	'pageDescription': ''
+})
+</head>
+<body class="app page" data-header="nobg">
+@@include('@@webRoot/template/_header.html')
+	<main class="app__content">
+		<section class="section contacts contacts--inner">
+			<div class="contacts__top">
+				<div class="contacts__img">
+					<picture>
+						<source srcset="@@webRoot/images/contacts.webp" type="image/webp">
+						<source srcset="@@webRoot/images/contacts.jpg" type="image/jpeg">
+						<img src="@@webRoot/images/contacts.jpg" alt="" loading="lazy" />
+					</picture>
+				</div>
+				<div class="container contacts__crumbs">
+					<div class="ui-crumbs ui-crumbs--w">
+						<div class="ui-crumbs__item">
+							<a href="@@webRoot/">
+								Главная
+							</a>
+						</div>
+						<div class="ui-crumbs__item">
+							Контакты
+						</div>
+					</div>
+				</div>
+				<header class="head contacts__head">
+					<h1 class="head__title">
+						Контакты
+					</h1>
+				</header>
+				<div class="contacts__top-s"></div>
+			</div>
+			<div class="container">
+				<div class="ui-grid contacts__list">
+					<div class="ui-grid__col contacts__list-col">
+						<a class="ui-feature ui-feature--t2 ui-btn-c">
+							<div class="ui-feature__icon">
+								<svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-contacts1"></use></svg>
+							</div>
+							<h3 class="ui-feature__ttl">
+								Адрес
+							</h3>
+							<div class="ui-feature__text">
+								<p>
+									г. Владимир, улица улица, дом 6
+								</p>
+							</div>
+							<div class="ui-feature__bot">
+								<div class="ui-btn ui-btn--simple ui-btn--fw-4 ui-btn--grey-green">
+									<span class="ui-btn__text">
+										Посмотреть на&nbsp;карте
+									</span>
+									<span class="ui-btn__arr">
+										<svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-btn"></use></svg>
+									</span>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="ui-grid__col contacts__list-col">
+						<a class="ui-feature ui-feature--t2 ui-btn-c" href="tel:+79999999999">
+							<div class="ui-feature__icon">
+								<svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-contacts2"></use></svg>
+							</div>
+							<h3 class="ui-feature__ttl">
+								Телефон
+							</h3>
+							<div class="ui-feature__text">
+								<p>
+									+7 (999) 999-99-99
+								</p>
+							</div>
+							<div class="ui-feature__bot">
+								<div class="ui-btn ui-btn--simple ui-btn--fw-4 ui-btn--grey-green">
+									<span class="ui-btn__text">
+										Обратный звонок
+									</span>
+									<span class="ui-btn__arr">
+										<svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-btn"></use></svg>
+									</span>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="ui-grid__col contacts__list-col">
+						<a class="ui-feature ui-feature--t2 ui-btn-c" href="mailto:info@forest33.ru">
+							<div class="ui-feature__icon">
+								<svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-contacts3"></use></svg>
+							</div>
+							<h3 class="ui-feature__ttl">
+								Почта
+							</h3>
+							<div class="ui-feature__text">
+								<p>
+									info@forest33.ru
+								</p>
+							</div>
+							<div class="ui-feature__bot">
+								<div class="ui-btn ui-btn--simple ui-btn--fw-4 ui-btn--grey-green">
+									<span class="ui-btn__text">
+										Написать нам
+									</span>
+									<span class="ui-btn__arr">
+										<svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-btn"></use></svg>
+									</span>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="ui-grid__col contacts__list-col">
+						<div class="ui-feature ui-feature--t2">
+							<div class="ui-feature__icon">
+								<svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-contacts4"></use></svg>
+							</div>
+							<h3 class="ui-feature__ttl">
+								Режим работы
+							</h3>
+							<div class="ui-feature__text">
+								<p>
+									ПН-ПТ: 9:00 - 21:00
+								</p>
+								<p>
+									СБ-ВС: 9:00 - 21:00
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="ui-grid contacts__block">
+					<div class="ui-grid__col contacts__block-col">
+						<header class="head head--in-cont contacts__block-head">
+							<h2 class="head__title contacts__block-title">
+								Остались вопросы?
+							</h2>
+						</header>
+						<div class="ui-text contacts__block-text contacts__block-text--2">
+							<p>
+								Amet minim mollit non deserunt ullamco est sit aliqua Amet minim mollit non deserunt ullamco est sit aliqua Amet minim mollit non deserunt ullamco est sit aliqua 
+							</p>
+						</div>
+						<form class="ui-grid contacts__form">
+							<div class="ui-grid__col contacts__form-col contacts__form-col--1">
+								<label class="ui-input ui-input--2">
+									<span class="ui-input__t">Ваше имя</span>
+									<span class="ui-input__i ui-input__i--n">
+										<input type="text" placeholder="Имя" />
+									</span>
+								</label>
+							</div>
+							<div class="ui-grid__col contacts__form-col contacts__form-col--1">
+								<label class="ui-input ui-input--2">
+									<span class="ui-input__t">Ваш телефон</span>
+									<span class="ui-input__i ui-input__i--p">
+										<input type="text" placeholder="Телефон" />
+									</span>
+								</label>
+							</div>
+							<div class="ui-grid__col contacts__form-col contacts__form-col--f">
+								<label class="ui-input ui-input--2">
+									<span class="ui-input__t">Ваше обращение</span>
+									<span class="ui-input__i ui-input__i--m">
+										<textarea textarea placeholder="Обращение" rows="3"></textarea>
+									</span>
+								</label>
+							</div>
+							<div class="ui-grid__col contacts__form-col contacts__form-col--f">
+								<div class="contacts__form-btn">
+									<button class="ui-btn ui-btn--green ui-btn--fw" type="submit">
+										<span class="ui-btn__text">
+											Отправить
+										</span>
+									</button>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="ui-grid__col contacts__block-col contacts__block-col--m">
+						<div class="contacts__block-map">
+							<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aa78100f8f8e530a78f208384177fb94a73b9a44a473255f859630e5353017dd5&amp;source=constructor" frameborder="0" loading="lazy"></iframe>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+@@include('@@webRoot/template/_footer.html')
+@@include('@@webRoot/template/_popups.html')
+@@include('@@webRoot/template/_foot.html')
+</body>
+</html>
