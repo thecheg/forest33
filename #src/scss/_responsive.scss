@@ -32,6 +32,10 @@
 
 @media only screen and (max-width: 1200px) {
 
+	:root {
+		--header-height:90px;
+	}
+
 	.section {
 		--section-pad:var(--page-gap);
 	}
@@ -400,8 +404,10 @@
 
 	.header {
 		&__btns {
-			&--r {
-				display:none;
+			&-item {
+				&--d {
+					display:none;
+				}
 			}
 		}
 

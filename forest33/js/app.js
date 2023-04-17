@@ -22986,7 +22986,7 @@ const app = {
 		scrollOffset: function() {
 			let off = 0;
 			if (app.matches('max-width:1200px')) {
-				off = 100;
+				off = 90;
 			}
 			if (app.matches('max-width:800px')) {
 				off = 60;

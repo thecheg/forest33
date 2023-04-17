@@ -1,6 +1,7 @@
 .header {
 	color:#fff;
 	position:absolute;
+	position:fixed;
 	left:0;
 	top:0;
 	z-index:20;
@@ -249,6 +250,37 @@
 		@media only screen and (min-width: 1201px) {
 			display:none;
 		}
+	}
+
+	@media only screen and (min-width: 1201px) {
+
+		&__left {
+			//transition:padding .4s;
+		}
+
+		&__block,
+		&__left {
+			transition:height .4s;
+		}
+
+		&--scrolled {
+			--header-height:100px;
+
+			&:before {
+				opacity:1!important;
+			}
+		}
+
+		&--scrolled & {
+			&__left {
+				padding-right:80px;
+			}
+
+			&__logo {
+				width:56px;
+			}
+		}
+
 	}
 }
 

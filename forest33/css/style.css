@@ -2700,6 +2700,7 @@ html.no-touch .ui-socials__item:hover svg {
 .header {
 	color: #fff;
 	position: absolute;
+	position: fixed;
 	left: 0;
 	top: 0;
 	z-index: 20;
@@ -4627,6 +4628,29 @@ html.no-touch .footer__links-item a:hover {
 	.header__toggle {
 		display: none;
 	}
+
+	.header__block,
+	.header__left {
+		-webkit-transition: height 0.4s;
+		-o-transition: height 0.4s;
+		transition: height 0.4s;
+	}
+
+	.header--scrolled {
+		--header-height: 100px;
+	}
+
+	.header--scrolled:before {
+		opacity: 1 !important;
+	}
+
+	.header--scrolled .header__left {
+		padding-right: 80px;
+	}
+
+	.header--scrolled .header__logo {
+		width: 56px;
+	}
 }
 
 @media only screen and (min-width: 1301px) {
@@ -4662,6 +4686,10 @@ html.no-touch .footer__links-item a:hover {
 }
 
 @media only screen and (max-width: 1200px) {
+	:root {
+		--header-height: 90px;
+	}
+
 	.section {
 		--section-pad: var(--page-gap);
 	}
@@ -4976,7 +5004,7 @@ html.no-touch .footer__links-item a:hover {
 		height: 12px;
 	}
 
-	.header__btns--r {
+	.header__btns-item--d {
 		display: none;
 	}
 

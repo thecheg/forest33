@@ -19,7 +19,7 @@ const app = {
 			let off = 0;
 
 			if (app.matches('max-width:1200px')) {
-				off = 100;
+				off = 90;
 			}
 
 			if (app.matches('max-width:800px')) {
