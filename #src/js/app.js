@@ -16,7 +16,7 @@ const app = {
 		sbWidth: 0,
 
 		scrollOffset: function() {
-			let off = 0;
+			let off = 100;
 
 			if (app.matches('max-width:1200px')) {
 				off = 90;
