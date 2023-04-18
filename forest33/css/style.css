@@ -4588,11 +4588,11 @@ html.no-touch .footer__links-item a:hover {
 		background: #1B5F4D;
 	}
 
-	.header__menu-sublist~.header__menu-link {
+	.header__menu-link--a {
 		padding-right: 15px;
 	}
 
-	.header__menu-sublist~.header__menu-link:after {
+	.header__menu-link--a:after {
 		content: "";
 		position: absolute;
 		right: 0;
